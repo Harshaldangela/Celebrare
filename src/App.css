@@ -1,0 +1,88 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  height: 100vh;
+  position: relative;
+}
+.undo-redo-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.icon-button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+#text-container {
+  width: 90%;
+  max-width: 800px;
+  height: 60vh; 
+  background-color: #f0f0f0;
+  border: 2px solid #656565;
+  border-radius: 8px;
+  position: relative;
+  margin-top: 70px; 
+  overflow: hidden;
+}
+.active-text {
+  border: 1px solid blue;
+}
+#text-container div:hover {
+  cursor: move;
+  border-color: #656565; 
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button, select {
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  transition: background-color 0.2s ease; 
+}
+
+button:hover, select:hover {
+  background-color: #818181;
+}
+
+button:active, select:active {
+  background-color: #b49595;
+}
+
+button:disabled {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+@media (max-width: 768px) {
+  #text-container {
+    height: 50vh;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button, select {
+    width: 100%; 
+  }
+}
